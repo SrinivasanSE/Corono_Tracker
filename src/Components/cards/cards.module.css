@@ -1,0 +1,89 @@
+.container {
+  margin: 50px 0;
+}
+
+.card {
+  margin: 0 2% !important;
+}
+
+.infected:hover {
+  box-shadow: -1px 10px 29px 0px rgba(14, 76, 211, 0.8);
+  animation: infected 1s 1 ease;
+}
+.infected {
+  border-bottom: 10px solid rgba(73, 10, 221, 0.6);
+  transition: transform 5s;
+}
+.recovered:hover {
+  box-shadow: -1px 10px 29px 0px rgba(14, 76, 211, 0.8);
+  animation: recovered 1s 1 ease;
+}
+
+.recovered {
+  border-bottom: 10px solid rgba(0, 255, 0, 1);
+  transition: transform 5s;
+}
+.deaths:hover {
+  box-shadow: -1px 10px 29px 0px rgba(14, 76, 211, 0.8);
+  animation: deaths 2s 1 ease;
+}
+.deaths {
+  border-bottom: 10px solid rgba(255, 0, 0);
+  transition: transform 5s;
+}
+@keyframes infected {
+  0% {
+    transform: rotate(360deg);
+    background-color: rgb(100, 237, 118);
+  }
+  100% {
+    transform: rotate(-360deg);
+    background-color: rgb(73, 20, 220);
+  }
+}
+@keyframes recovered {
+  0% {
+    transform: rotate(-360deg);
+    background-color: rgb(247, 11, 11);
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: rgb(28, 236, 9);
+  }
+}
+@keyframes deaths {
+  0% {
+    transform: rotate(-360deg);
+    background-color: rgb(100, 237, 130);
+  }
+  50% {
+    transform: rotate(360deg);
+    background-color: rgb(90, 20, 220);
+  }
+  100% {
+    transform: rotate(-360deg);
+    background-color: rgb(241, 6, 6);
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .card {
+    margin: 2% 0 !important;
+  }
+}
+.text {
+  animation: blink 1s ease infinite;
+}
+.textRecovery {
+  animation: blink 1s ease infinite;
+  color: rgba(0, 255, 0, 1);
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
