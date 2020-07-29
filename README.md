@@ -12,5 +12,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. React
 2. Redux
+3. Material Design
 
 ## use npm install to install all dependencies and then run npm start to run in development mode
